@@ -49,9 +49,17 @@ Os arquivos de texto e o código integral, bem com a base de dados utilizada pod
 
 Alguns pontos importantes antes de executar os códigos:
 
+
+
+
+<strike> 
 * Por utilizar o colab e o armazenamento do Google Drive para o desenvolvimento do projeto, foi necessário realizar a conexão com o Google Drive utilizando as libraries httr, googledrive, httpuv e R.utils.
 As células e  bibliotecas extras decorrem do fato do Google Colab não dispor de R Nativo, não sendo possível montar o armazenamento para acesso a base de dados, como em sua versão com python.
 Caso o usuário deseje reproduzir o projeto localmente em sua máquina, as células 2 e 3 do script (referente a conexão e acesso Google Drive), as bibliotecas citadas acima, bem como a célula um da sessão "Carregamento e limpeza dos dados" podem ser descartadas.
+</strike> 
+
+* A base escolhida para o projeto, foi a base de microdados do ENEM de 2020. Seu download pode ser feito diretamente no site do [INEP](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem) ou diretamente na pasta dos arquivos do Drive. Anteriormente, o carregamento do arquivo era realizado através de conexão http com o google drive, porém devido a problemas de autenticações com o pacote e o google, optou-se por utilizar o carregamento direto na área de arquivos do google colab.
+Vale ressaltar ainda que ao encerrar ou reiniciar a sessão, todos os arquivos na memória do colab são apagados, sendo necessários recarregá-los novamente.
 
 * Em algumas etapas do código haverá a adiçã do código gc(), sua função é limpar o cache e resíduos da memória, funcional principalmente quando se está rodando localmente.
 
